@@ -1,0 +1,8 @@
+  - name: Install Apache and others
+    yum:
+      name: python3
+      state: latest
+      update_cache: yes
+
+  - name: python
+    shell: 'nohup python3 /home/ubuntu/Flaskex/app.py & '

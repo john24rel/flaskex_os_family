@@ -1,0 +1,11 @@
+- name: python3-pip
+  package:
+    name: python3-pip
+    state: latest
+    update_cache: yes
+
+
+- name: change directory
+  pip:
+    requirements:  /home/ubuntu/Flaskex/requirements.txt
+    executable: pip3

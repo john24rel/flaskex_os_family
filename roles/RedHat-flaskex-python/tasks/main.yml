@@ -1,0 +1,8 @@
+  - name: Install Apache and others
+    yum:
+      name: python3
+      state: latest
+
+
+  - name: python
+    shell: 'nohup python3 /home/centos/Flaskex/app.py & '

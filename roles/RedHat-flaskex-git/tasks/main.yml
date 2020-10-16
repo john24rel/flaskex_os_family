@@ -1,0 +1,13 @@
+- name: Install git
+  yum:
+    name:
+      - git
+    state: latest
+
+
+- name: Clone a Flaskex repo
+  git:
+    repo: "{{ flaskex_repo }}" 
+    dest: /home/centos/Flaskex
+    version: "{{ flaskex_branch }}"
+    

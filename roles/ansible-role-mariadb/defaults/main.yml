@@ -1,4 +1,0 @@
----
-mysql_db: "mydb"
-mysql_user: "admin"
-mysql_password: "password"

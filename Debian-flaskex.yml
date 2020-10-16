@@ -1,0 +1,23 @@
+  - name: Update hostname
+    import_role:
+      name:  Debian-flaskex-hostname
+    vars:
+      server_name: "{{ inventory_hostname }}"
+
+  - name: install apache
+    import_role: 
+      name: Debian-flaskex-apache
+   
+
+  - name: Install git
+    import_role:
+      name: Debian-flaskex-git
+  
+  - name: Install pip3
+    import_role:
+      name: Debian-flaskex-pip
+   
+  
+  - name: Install python3
+    import_role:
+      name: Debian-flaskex-python

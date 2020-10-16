@@ -1,0 +1,27 @@
+  - name: Update hostname
+    import_role:
+      name:  RedHat-flaskex-hostname
+    vars:
+      server_name: "{{ inventory_hostname }}"
+
+  - name: Disable SELinux
+    selinux:
+      state: disabled
+
+  - name: install apache
+    import_role: 
+      name: RedHat-flaskex-apache
+   
+
+  - name: Install git
+    import_role:
+      name: RedHat-flaskex-git
+  
+  - name: Install pip3
+    import_role:
+      name: RedHat-flaskex-pip
+   
+  
+  - name: Install python3
+    import_role:
+      name: RedHat-flaskex-python

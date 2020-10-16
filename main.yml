@@ -1,0 +1,17 @@
+- hosts: web
+  handlers:
+  - name: Redhat restart httpd
+    service:
+      name: httpd
+      state: restarted
+  tasks:
+  - include_tasks: "{{ ansible_os_family }}-flaskex.yml"
+
+- hosts: db
+  handlers:
+  - name: Debian restart apache
+    service:
+      name: apache2
+      state: restarted
+  tasks:
+  - include_tasks: "{{ ansible_os_family }}-flaskex.yml"
