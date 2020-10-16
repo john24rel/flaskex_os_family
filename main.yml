@@ -1,17 +1,21 @@
 - hosts: web
-  handlers:
-  - name: Redhat restart httpd
-    service:
-      name: httpd
-      state: restarted
+  tasks:
+  yum:
+  - name: 
+      - wget
+      - vim
+      - unzip
+    state: latest  
   tasks:
   - include_tasks: "{{ ansible_os_family }}-flaskex.yml"
 
 - hosts: db
-  handlers:
-  - name: Debian restart apache
-    service:
-      name: apache2
-      state: restarted
+  tasks:
+  yum:
+  - name: 
+      - wget
+      - vim
+      - unzip
+    state: latest  
   tasks:
   - include_tasks: "{{ ansible_os_family }}-flaskex.yml"
