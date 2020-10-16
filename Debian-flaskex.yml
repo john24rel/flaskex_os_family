@@ -1,3 +1,12 @@
+  - name:
+    package:
+      name:
+        - vim
+        - wget
+        - vim
+        - unzip
+      state: latest
+
   - name: Update hostname
     import_role:
       name:  Debian-flaskex-hostname

@@ -1,21 +1,7 @@
 - hosts: web
   tasks:
-  yum:
-  - name: 
-      - wget
-      - vim
-      - unzip
-    state: latest  
-  tasks:
   - include_tasks: "{{ ansible_os_family }}-flaskex.yml"
 
 - hosts: db
-  tasks:
-  package::
-  - name: 
-      - wget
-      - vim
-      - unzip
-    state: latest  
   tasks:
   - include_tasks: "{{ ansible_os_family }}-flaskex.yml"
